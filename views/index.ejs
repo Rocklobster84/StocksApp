@@ -1,0 +1,44 @@
+<%- include ('./partials/header') %>
+
+<div class="ui main container">
+    <div class="ui huge header">Welcome to the Stock Viewer</div>
+    <p>Click "More Info" to read more about a particular stock, to update it, or to delete it.</p>
+    <div class="ui grid">
+
+            <% Stocks.forEach(function(allStocks){ %>
+            <div class="four wide column">
+            <div class="ui card">
+                <div class="content">
+                    <div class="header"><%= allStocks.Ticker %></div>
+                </div>
+                <div class="content">
+                    <div class="content">
+                        <h4 class="ui sub header">Profit Margin: <%= allStocks['Profit Margin'] %></h4>
+                        <div class="event">
+                            <div class="content">
+                                <div class="summary">
+                                    <p><span class="strong">Sector:</span> <%= allStocks.Sector %></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="event">
+                            <div class="content">
+                                <div class="summary">
+                                    <p><span class="strong">Performance YTD:</span> <%= allStocks['Performance (YTD)'] %></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="extra content">
+                            <a href="/stocks/<%= allStocks._id %>" class="ui teal button">More Info</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <% }) %>
+
+<%- include ('./partials/pagination') %>
+    </div>
+</div>
+
+<%- include ('./partials/footer') %>

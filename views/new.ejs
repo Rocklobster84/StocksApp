@@ -1,0 +1,161 @@
+<%- include ('./partials/header') %>
+
+<div class="ui main text container segment intro-box">
+    <div class="ui huge header">New Stock</div>
+
+    <form class="ui form" action="/stocks" method="POST">
+        <div class="field">
+            <label for="ticker">Ticker</label>
+            <input type="text" name="stock[Ticker]" id="ticker">
+        </div>
+        <div class="field">
+            <label for="profit">Profit Margin</label>
+            <input  type="number" name="stock[Profit Margin]" id="profit">
+        </div>
+        <div class="field">
+            <label for="ownership">Institutional Ownership</label>
+            <input  type="number" name="stock[Institutional Ownership]" id="ownership">
+        </div>
+        <div class="field">
+            <label for="epsGrowth">EPS Growth Past 5 Years</label>
+            <input  type="number" name="stock[EPS Growth Past 5 Years]" id="epsGrowth">
+        </div>
+        <div class="field">
+            <label for="totDebt">Total Debt/Equity</label>
+            <input  type="number" name="stock[Total Debt/Equity]" id="totDebt">
+        </div>
+        <div class="field">
+            <label for="ratio">Current Ratio</label>
+            <input  type="number" name="stock[Current Ratio]" id="ratio">
+        </div>
+        <div class="field">
+            <label for="returnAssets">Return on Assets</label>
+            <input  type="number" name="stock[Return on Assets]" id="returnAssets">
+        </div>
+        <div class="field">
+            <label for="sector">Sector</label>
+            <input  type="text" name="stock[Sector]" id="sector">
+        </div>
+        <div class="field">
+            <label for="pS">P/S</label>
+            <input  type="number" name="stock[P/S]" id="pS">
+        </div>
+        <div class="field">
+            <label for="change">Change from Open</label>
+            <input  type="number" name="stock[Change from Open]" id="change">
+        </div>
+        <div class="field">
+            <label for="ytd">Performance (YTD)</label>
+            <input  type="number" name="stock[Performance (YTD)]" id="ytd">
+        </div>
+        <div class="field">
+            <label for="week">Performance (Week)</label>
+            <input  type="number" name="stock[Performance (Week)]" id="week">
+        </div>
+        <div class="field">
+            <label for="quick">Quick Ratio</label>
+            <input  type="number" name="stock[Quick Ratio]" id="quick">
+        </div>
+        <div class="field">
+            <label for="insider">Insider Transactions</label>
+            <input  type="number" name="stock[Insider Transactions]" id="insider">
+        </div>
+        <div class="field">
+            <label for="pB">P/B</label>
+            <input  type="number" name="stock[P/B]" id="pB">
+        </div>
+        <div class="field">
+            <label for="epsQuarter">EPS growth quarter over quarter</label>
+            <input  type="number" name="stock[EPS growth quarter over quarter]" id="epsQuarter">
+        </div>
+        <div class="field">
+            <label for="payout">Payout Ratio</label>
+            <input  type="number" name="stock[Payout Ratio]" id="payout">
+        </div>
+        <div class="field">
+            <label for="performance">Performance (Quarter)</label>
+            <input  type="number" name="stock[Performance (Quarter)]" id="performance">
+        </div>
+        <div class="field">
+            <label for="forwardPE">Forward P/E</label>
+            <input  type="number" name="stock[Forward P/E]" id="forwardPE">
+        </div>
+        <div class="field">
+            <label for="pE">P/E</label>
+            <input  type="number" name="stock[P/E]" id="pE">
+        </div>
+        <div class="field">
+            <label for="movAvg">200-Day Simple Moving Average</label>
+            <input  type="number" name="stock[200-Day Simple Moving Average]" id="movAvg">
+        </div>
+        <div class="field">
+            <label for="outstanding">Shares Outstanding</label>
+            <input  type="number" name="stock[Shares Outstanding]" id="outstanding">
+        </div>
+        <div class="field">
+            <label for="earnings">Earnings Date</label>
+            <input  type="date" name="stock[Earnings Date]" id="earnings">
+        </div>
+        <div class="field">
+            <label for="weekHigh">52-Week High</label>
+            <input  type="number" name="stock[52-Week High]" id="weekHigh">
+        </div>
+        <div class="field">
+            <label for="pCash">P/Cash</label>
+            <input  type="number" name="stock[P/Cash]" id="pCash">
+        </div>
+        <div class="field">
+            <label for="changeNum">Change</label>
+            <input  type="number" name="stock[Change]" id="changeNum">
+        </div>
+        <div class="field">
+            <label for="recom">Analyst Recom</label>
+            <input  type="number" name="stock[Analyst Recom]" id="recom">
+        </div>
+        <div class="field">
+            <label for="volatility">Volatility (Week)</label>
+            <input  type="number" name="stock[Volatility (Week)]" id="volatility">
+        </div>
+        <div class="field">
+            <label for="country">Country</label>
+            <input  type="text" name="stock[Country]" id="country">
+        </div>
+        <div class="field">
+            <label for="returnEquity">Return on Equity</label>
+            <input  type="number" name="stock[Return on Equity]" id="returnEquity">
+        </div>
+        <div class="field">
+            <label for="fiftyLow">50-Day Low</label>
+            <input  type="number" name="stock[50-Day Low]" id="fiftyLow">
+        </div>
+        <div class="field">
+            <label for="price">Price</label>
+            <input  type="number" name="stock[Price]" id="price">
+        </div>
+        <div class="field">
+            <label for="fiftyHigh">50-Day High</label>
+            <input  type="number" name="stock[50-Day High]" id="fiftyHigh">
+        </div>
+        <div class="field">
+            <label for="roi">Return on Investment</label>
+            <input  type="number" name="stock[Return on Investment]" id="roi">
+        </div>
+        <div class="field">
+            <label for="shares">Shares Float</label>
+            <input  type="number" name="stock[Shares Float]" id="shares">
+        </div>
+        <div class="field">
+            <label for="dividend">Dividend Yield</label>
+            <input  type="number" name="stock[Dividend Yield]" id="dividend">
+        </div>
+        <div class="field">
+            <label for="epsGrowFive">EPS growth next 5 years</label>
+            <input  type="number" name="stock[EPS growth next 5 years]" id="epsGrowFive" >
+        </div>
+        <button class="ui button" type="submit">Submit</button>
+
+    </form>
+
+</div>
+
+<%- include ('./partials/footer') %>

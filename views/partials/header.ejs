@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- PAGE TITLE -->
+    <title>Stock Viewer</title>
+
+    <!-- CSS FILES -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="/stylesheets/stock-styles.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+
+<div class="ui inverted segment">
+    <div class="ui massive inverted secondary menu container">
+        <a href="/" class="item strong nav"><i class="dollar sign icon"></i> Stock Viewer</a>
+        <a href="/" class="item nav">Home</a>
+        <a href="/stocks/new" class="item nav">New Stock</a>
+        <div class="right item">
+            <form action="/stocks" method="GET">
+            <div class="ui icon input">
+                <input type="text" name="search" placeholder="Search by Ticker">
+                <i class="circular search link icon"></i>
+                <input type="submit" value="Search">
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="ui container">
+    <% if(error && error.length > 0){ %>
+    <div class="ui negative message">
+        <div class="header">
+            <%= error %>
+        </div>
+    </div>
+    <% } %>
+
+    <% if(success && success.length > 0){ %>
+    <div class="ui success message">
+        <div class="header">
+            <%= success %>
+        </div>
+    </div>
+    <% } %>
+    <br>
+</div>

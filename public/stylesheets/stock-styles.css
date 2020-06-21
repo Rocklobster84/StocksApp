@@ -1,0 +1,19 @@
+.strong {
+	font-weight: bold;
+}
+
+.nav {
+	font-size: 1.4em;
+}
+
+.intro-box {
+	margin-top: 7em;
+}
+
+footer {
+	padding-top: 5em;
+}
+
+#delete {
+	display: inline;
+}

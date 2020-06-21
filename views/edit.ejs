@@ -1,0 +1,161 @@
+<%- include ('./partials/header') %>
+
+<div class="ui main text container segment intro-box">
+    <div class="ui huge header">Edit <%= stock.Ticker %></div>
+
+    <form class="ui form" action="/stocks/<%= stock._id %>?_method=PUT" method="POST">
+        <div class="field">
+            <label for="ticker">Ticker</label>
+            <input type="text" name="stock[Ticker]" value="<%= stock.Ticker %>">
+        </div>
+        <div class="field">
+            <label for="profit">Profit Margin</label>
+            <input  type="number" name="stock[Profit Margin]" value="<%= stock['Profit Margin'] %>" >
+        </div>
+        <div class="field">
+            <label for="ownership">Institutional Ownership</label>
+            <input  type="number" name="stock[Institutional Ownership]" value="<%= stock['Institutional Ownership'] %>">
+        </div>
+        <div class="field">
+            <label for="epsGrowth">EPS Growth Past 5 Years</label>
+            <input  type="number" name="stock[EPS Growth Past 5 Years]" value="<%= stock['EPS Growth Past 5 Years'] %>">
+        </div>
+        <div class="field">
+            <label for="totDebt">Total Debt/Equity</label>
+            <input  type="number" name="stock[Total Debt/Equity]" value="<%= stock['Total Debt/Equity'] %>">
+        </div>
+        <div class="field">
+            <label for="ratio">Current Ratio</label>
+            <input  type="number" name="stock[Current Ratio]" value="<%= stock['Current Ratio'] %>">
+        </div>
+        <div class="field">
+            <label for="returnAssets">Return on Assets</label>
+            <input  type="number" name="stock[Return on Assets]" value="<%= stock['Return on Assets'] %>">
+        </div>
+        <div class="field">
+            <label for="sector">Sector</label>
+            <input  type="text" name="stock[Sector]" value="<%= stock.Sector %>">
+        </div>
+        <div class="field">
+            <label for="pS">P/S</label>
+            <input  type="number" name="stock[P/S]" value="<%= stock['P/S'] %>">
+        </div>
+        <div class="field">
+            <label for="change">Change from Open</label>
+            <input  type="number" name="stock[Change from Open]" value="<%= stock['Change from Open'] %>">
+        </div>
+        <div class="field">
+            <label for="ytd">Performance (YTD)</label>
+            <input  type="number" name="stock[Performance (YTD)]" value="<%= stock['Performance (YTD)'] %>">
+        </div>
+        <div class="field">
+            <label for="week">Performance (Week)</label>
+            <input  type="number" name="stock[Performance (Week)]" value="<%= stock['Performance (Week)'] %>">
+        </div>
+        <div class="field">
+            <label for="quick">Quick Ratio</label>
+            <input  type="number" name="stock[Quick Ratio]" value="<%= stock['Quick Ratio'] %>">
+        </div>
+        <div class="field">
+            <label for="insider">Insider Transactions</label>
+            <input  type="number" name="stock[Insider Transactions]" value="<%= stock['Insider Transactions'] %>">
+        </div>
+        <div class="field">
+            <label for="pB">P/B</label>
+            <input  type="number" name="stock[P/B]" value="<%= stock['P/B'] %>">
+        </div>
+        <div class="field">
+            <label for="epsQuarter">EPS growth quarter over quarter</label>
+            <input  type="number" name="stock[EPS growth quarter over quarter]" value="<%= stock['EPS growth quarter over quarter'] %>">
+        </div>
+        <div class="field">
+            <label for="payout">Payout Ratio</label>
+            <input  type="number" name="stock[Payout Ratio]" value="<%= stock['Payout Ratio'] %>">
+        </div>
+        <div class="field">
+            <label for="performance">Performance (Quarter)</label>
+            <input  type="number" name="stock[Performance (Quarter)]" value="<%= stock['Performance (Quarter)'] %>">
+        </div>
+        <div class="field">
+            <label for="forwardPE">Forward P/E</label>
+            <input  type="number" name="stock[Forward P/E]" value="<%= stock['Forward P/E'] %>">
+        </div>
+        <div class="field">
+            <label for="pE">P/E</label>
+            <input  type="number" name="stock[P/E]" value="<%= stock['P/E'] %>">
+        </div>
+        <div class="field">
+            <label for="movAvg">200-Day Simple Moving Average</label>
+            <input  type="number" name="stock[200-Day Simple Moving Average]" value="<%= stock['200-Day Simple Moving Average'] %>">
+        </div>
+        <div class="field">
+            <label for="outstanding">Shares Outstanding</label>
+            <input  type="number" name="stock[Shares Outstanding]" value="<%= stock['Shares Outstanding'] %>">
+        </div>
+        <div class="field">
+            <label for="earnings">Earnings Date</label>
+            <input  type="date" name="stock[Earnings Date]" value="<%= stock['Earnings Date'] %>">
+        </div>
+        <div class="field">
+            <label for="weekHigh">52-Week High</label>
+            <input  type="number" name="stock[52-Week High]" value="<%= stock['52-Week High'] %>">
+        </div>
+        <div class="field">
+            <label for="pCash">P/Cash</label>
+            <input  type="number" name="stock[P/Cash]" value="<%= stock['P/Cash'] %>">
+        </div>
+        <div class="field">
+            <label for="changeNum">Change</label>
+            <input  type="number" name="stock[Change]" value="<%= stock.Change %>">
+        </div>
+        <div class="field">
+            <label for="recom">Analyst Recom</label>
+            <input  type="number" name="stock[Analyst Recom]" value="<%= stock['Analyst Recom'] %>">
+        </div>
+        <div class="field">
+            <label for="volatility">Volatility (Week)</label>
+            <input  type="number" name="stock[Volatility (Week)]" value="<%= stock['Volatility (Week)'] %>">
+        </div>
+        <div class="field">
+            <label for="country">Country</label>
+            <input  type="text" name="stock[Country]" value="<%= stock.Country %>">
+        </div>
+        <div class="field">
+            <label for="returnEquity">Return on Equity</label>
+            <input  type="number" name="stock[Return on Equity]" value="<%= stock['Return on Equity'] %>">
+        </div>
+        <div class="field">
+            <label for="fiftyLow">50-Day Low</label>
+            <input  type="number" name="stock[50-Day Low]" value="<%= stock['50-Day Low'] %>">
+        </div>
+        <div class="field">
+            <label for="price">Price</label>
+            <input  type="number" name="stock[Price]" value="<%= stock.Price %>">
+        </div>
+        <div class="field">
+            <label for="fiftyHigh">50-Day High</label>
+            <input  type="number" name="stock[50-Day High]" value="<%= stock['50-Day High'] %>">
+        </div>
+        <div class="field">
+            <label for="roi">Return on Investment</label>
+            <input  type="number" name="stock[Return on Investment]" value="<%= stock['Return on Investment'] %>">
+        </div>
+        <div class="field">
+            <label for="shares">Shares Float</label>
+            <input  type="number" name="stock[Shares Float]" value="<%= stock['Shares Float'] %>">
+        </div>
+        <div class="field">
+            <label for="dividend">Dividend Yield</label>
+            <input  type="number" name="stock[Dividend Yield]" value="<%= stock['Dividend Yield'] %>">
+        </div>
+        <div class="field">
+            <label for="epsGrowFive">EPS growth next 5 years</label>
+            <input  type="number" name="stock[EPS growth next 5 years]" value="<%= stock['EPS growth next 5 years'] %>" >
+        </div>
+        <button class="ui button" type="submit">Submit</button>
+
+    </form>
+
+</div>
+
+<%- include ('./partials/footer') %>

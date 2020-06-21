@@ -1,0 +1,49 @@
+<%- include ('./partials/header') %>
+
+<div class="ui main text container segment">
+    <div class="ui huge header"><%= stock.Ticker %></div>
+    <a class="ui teal button" href="/stocks/<%= stock._id %>/edit">Edit</a>
+    <form id="delete" action="/stocks/<%= stock._id %>?_method=DELETE" method="POST">
+        <button class="ui red button">Delete</button>
+    </form>
+    <div class="ui text container segment">
+    <p><span class="strong">Profit Margin:</span> <%= stock['Profit Margin'] %></p>
+    <p><span class="strong">Institutional Ownership:</span> <%= stock['Institutional Ownership'] %></p>
+    <p><span class="strong">EPS Growth Past 5 Years:</span> <%= stock['EPS Growth Past 5 Years'] %></p>
+    <p><span class="strong">Total Debt/Equity:</span> <%= stock['Total Debt/Equity'] %></p>
+    <p><span class="strong">Current Ratio:</span> <%= stock['Current Ratio'] %></p>
+    <p><span class="strong">Return on Assets:</span> <%= stock['Return on Assets'] %></p>
+    <p><span class="strong">Sector:</span> <%= stock.Sector %></p>
+    <p><span class="strong">P/S:</span> <%= stock['P/S'] %></p>
+    <p><span class="strong">Change from Open:</span> <%= stock['Change from Open'] %></p>
+    <p><span class="strong">Performance YTD:</span> <%= stock['Performance (YTD)'] %></p>
+    <p><span class="strong">Performance (Week):</span> <%= stock['Performance (Week)'] %></p>
+    <p><span class="strong">Quick Ratio:</span> <%= stock['Quick Ratio'] %></p>
+    <p><span class="strong">Insider Transactions:</span> <%= stock['Insider Transactions'] %></p>
+    <p><span class="strong">P/B:</span> <%= stock['P/B'] %></p>
+    <p><span class="strong">EPS growth quarter over quarter:</span> <%= stock['EPS growth quarter over quarter'] %></p>
+    <p><span class="strong">Payout Ratio:</span> <%= stock['Payout Ratio'] %></p>
+    <p><span class="strong">Performance (Quarter):</span> <%= stock['Performance (Quarter)'] %></p>
+    <p><span class="strong">Forward P/E:</span> <%= stock['Forward P/E'] %></p>
+    <p><span class="strong">P/E:</span> <%= stock['P/E'] %></p>
+    <p><span class="strong">200-Day Simple Moving Average:</span> <%= stock['200-Day Simple Moving Average'] %></p>
+    <p><span class="strong">Shares Outstanding:</span> <%= stock['Shares Outstanding'] %></p>
+    <p><span class="strong">Earnings Date:</span> <%= stock['Earnings Date'] %></p>
+    <p><span class="strong">52-Week High:</span> <%= stock['52-Week High'] %></p>
+    <p><span class="strong">P/Cash:</span> <%= stock['P/Cash'] %></p>
+    <p><span class="strong">Change:</span> <%= stock.Change %></p>
+    <p><span class="strong">Analyst Recom:</span> <%= stock['Analyst Recom'] %></p>
+    <p><span class="strong">Volatility (Week):</span> <%= stock['Volatility (Week)'] %></p>
+    <p><span class="strong">Country:</span> <%= stock.Country %></p>
+    <p><span class="strong">Return on Equity:</span> <%= stock['Return on Equity'] %></p>
+    <p><span class="strong">50-Day Low:</span> <%= stock['50-Day Low'] %></p>
+    <p><span class="strong">Price:</span> <%= stock.Price %></p>
+    <p><span class="strong">50-Day High:</span> <%= stock['50-Day High'] %></p>
+    <p><span class="strong">Return on Investment:</span> <%= stock['Return on Investment'] %></p>
+    <p><span class="strong">Shares Float:</span> <%= stock['Shares Float'] %></p>
+    <p><span class="strong">Dividend Yield:</span> <%= stock['Dividend Yield'] %></p>
+    <p><span class="strong">EPS growth next 5 years:</span> <%= stock['EPS growth next 5 years'] %></p>
+</div>
+</div>
+
+<%- include ('./partials/footer') %>
